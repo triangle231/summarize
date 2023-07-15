@@ -45,8 +45,8 @@ def summarize_text1(text, percentage):
     num_periods = text.count('.')
     
     # Calculate the number of sentences to include in the summary
-    n_sentences = max(1, round(num_periods * (percentage / 100)))
-    
+    n_sentences = max(1, round(num_periods * (percentage) / 100))
+
     summaries = ss.summarize(text, n_sentences)
     return ' '.join(summaries)
 
@@ -236,5 +236,5 @@ def summarize():
     if input_url is None or input_lang is None or input_percentage is None:
         return jsonify({"error": "url과 lang과 percentage 매개변수가 필요합니다."}), 400
 
-    summary = makeSummarize(input_url, input_lang, input_percentage)
+    summary = makeSummarize(input_url, input_lang, int(input_percentage))
     return jsonify({"summary": summary})
