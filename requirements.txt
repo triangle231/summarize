@@ -1,9 +1,6 @@
-numpy
-Flask
-textsum
 youtube_transcript_api
 yt-dlp
-regex
 langdetect
 requests
 nltk
+flask
