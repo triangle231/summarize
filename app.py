@@ -5,6 +5,7 @@ from langdetect import detect
 import requests
 from nltk.tokenize import sent_tokenize, word_tokenize
 import nltk
+nltk.download('punkt')
 from nltk.corpus import stopwords
 from collections import defaultdict
 from heapq import nlargest
